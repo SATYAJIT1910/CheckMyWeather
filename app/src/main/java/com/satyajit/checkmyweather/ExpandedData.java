@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -66,19 +67,23 @@ public class ExpandedData extends AppCompatActivity {
                             area.setText(desc+" in "+location);
 
                         } catch (JSONException e) {
+                          //  area.setText("City not Found");
                             e.printStackTrace();
+                            Log.d("CityNotFound","City not found");
+
                         }
                     }
                 }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
+                        current_temp.setText("");
+                        Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_LONG).show();
+                        area.setText("City not Found");
 
                     }
                 });
         queue.add(jsonObjectRequest);
-
 
     }
 }
