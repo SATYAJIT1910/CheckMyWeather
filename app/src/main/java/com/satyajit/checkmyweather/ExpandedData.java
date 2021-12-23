@@ -18,7 +18,10 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
+/**
+ * @author Satyajit Ghosh
+ * @since 24-12-2021
+ * */
 public class ExpandedData extends AppCompatActivity {
     private TextView current_temp,area,min_temp,max_temp,humidityView;
     @Override
