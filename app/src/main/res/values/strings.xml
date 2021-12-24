@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CheckMyWeather</string>
+    <string name="waiting_for_response">Waiting for Response</string>
+</resources>
